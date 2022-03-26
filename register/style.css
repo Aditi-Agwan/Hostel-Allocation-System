@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+:root{
+    --font-ubuntu:'Ubuntu',monospace;
+    --color-border:#e5e5e5;
+}
+
+.font-ubuntu{
+    font: normal 500 16px var(--font-ubuntu);
+}
+
+#signup{
+    padding: 50% 0;
+    background:url("assests/background.png") no-repeat;
+    background-size: cover;
+}
