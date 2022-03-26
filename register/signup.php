@@ -16,7 +16,30 @@
             <div class="d-flex justify-content-center">
                 <form action="signup.php" method="post" enctype="multipart/form-data" id="sign-form">
                     <div class="form-row">
-                        
+                        <div class="col">
+                            <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name"> 
+                        </div>
+                        <div class="col">
+                            <input type="text" name="middleName" id="middleName" class="form-control" placeholder="Middle Name"> 
+                        </div>
+                        <div class="col">
+                            <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name"> 
+                        </div>
+                    </div>
+                    <div class="form-row my-4">
+                        <div class="col">
+                            <input type="email" required name="email" id="email" class="form-control" placeholder="Email*">
+                        </div>
+                    </div>
+                    <div class="form-row my-4">
+                        <div class="col">
+                            <input type="password" required name="password" id="passsword" class="form-control" placeholder="Password*">
+                        </div>
+                    </div>
+                    <div class="form-row my-4">
+                        <div class="col">
+                            <input type="password" required name="confirm_pwd" id="confirm_pwd" class="form-control" placeholder="Confirm Password*">
+                        </div>
                     </div>
                 </form>
             </div>
