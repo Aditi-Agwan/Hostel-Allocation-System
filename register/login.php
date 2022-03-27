@@ -11,7 +11,11 @@ include('header.php');
             <div class="text-center pb-5">
                 <h1 class="login-title text-dark">Login</h1>
                 <p class="p-1 m-0 font-ubuntu text-black-50">Login for Hostel Allocation Process</p>
+<<<<<<< HEAD
                 <span class="font-ubuntu text-black-50">Don't have an account <a href="signup.php">Register</a></span>
+=======
+                <span class="font-ubuntu text-black-50">Don't have an account <a href="signup.php">Signup</a></span>
+>>>>>>> c29eb5f34a3219c851afcc4ac46ac879a0e116f6
             </div>
             <div class="d-flex justify-content-center">
                 <form action="login.php" method="post" enctype="multipart/form-data" id="sign-form">
