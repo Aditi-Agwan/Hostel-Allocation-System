@@ -16,15 +16,20 @@ include('header.php');
             <div class="d-flex justify-content-center">
                 <form action="signup.php" method="post" enctype="multipart/form-data" id="sign-form">
                     <div class="form-row">
-                        <div class=".col-sm-4">
-                            <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name">
-                        </div>
-                        <div class="col">
-                            <input type="text" name="middleName" id="middleName" class="form-control" placeholder="Middle Name">
-                        </div>
-                        <div class="col">
-                            <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name">
-                        </div>
+                    <table>
+                            <tr>
+                                <td> <div class=".col-sm-4">
+                               <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name">
+                                </div>
+                                <td>  <div class=".col-sm-4">
+                             <input type="text" name="middleName" id="middleName" class="form-control" placeholder="Middle Name">
+                             </div>  
+                                <td> <div class=".col-sm-4">
+                              <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name">
+                             </div>
+                            </tr>
+                        </table>
+                       
                     </div>
                     <div class="form-row my-4">
                         <div class="col">
