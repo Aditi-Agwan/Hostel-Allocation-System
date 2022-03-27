@@ -19,13 +19,13 @@ include('header.php');
                     <table>
                             <tr>
                                 <td> <div class=".col-sm-4">
-                               <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name">
+                               <input type="text" required name="firstName" id="firstName" class="form-control" placeholder="First Name">
                                 </div>
                                 <td>  <div class=".col-sm-4">
-                             <input type="text" name="middleName" id="middleName" class="form-control" placeholder="Middle Name">
+                             <input type="text" required name="middleName" id="middleName" class="form-control" placeholder="Middle Name">
                              </div>  
                                 <td> <div class=".col-sm-4">
-                              <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name">
+                              <input type="text"required name="lastName" id="lastName" class="form-control" placeholder="Last Name">
                              </div>
                             </tr>
                         </table>
