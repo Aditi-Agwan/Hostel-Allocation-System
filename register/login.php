@@ -11,14 +11,12 @@ include('header.php');
             <div class="text-center pb-5">
                 <h1 class="login-title text-dark">Login</h1>
                 <p class="p-1 m-0 font-ubuntu text-black-50">Login for Hostel Allocation Process</p>
-<<<<<<< HEAD
                 <span class="font-ubuntu text-black-50">Don't have an account <a href="signup.php">Register</a></span>
-=======
-                <span class="font-ubuntu text-black-50">Don't have an account <a href="signup.php">Signup</a></span>
->>>>>>> c29eb5f34a3219c851afcc4ac46ac879a0e116f6
+
+
             </div>
             <div class="d-flex justify-content-center">
-                <form action="login.php" method="post" enctype="multipart/form-data" id="sign-form">
+                <form action="authLogin.php" method="post" enctype="multipart/form-data" id="sign-form">
                     <div class="form-row my-4">
                         <div class="col">
                             <input type="email" required name="email" id="email" class="form-control" placeholder="Email*">
@@ -30,10 +28,9 @@ include('header.php');
                         </div>
                     </div>
                     <div class="elem-group">
-                      <label for="captcha">Please Enter the Captcha Text</label>
+                      <label for="captcha">Please Enter the Captcha Text</label><br>
                       <img src="captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
-                      <br>
-                      <input type="text" id="captcha" name="captcha_challenge" pattern="[A-Z]{6}">
+                      <input type="text" id="captcha" name="captcha_challenge">
                     </div>
                     <input type="submit" name ="login" value = "Login">
                 </form>
