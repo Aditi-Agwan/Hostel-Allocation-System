@@ -23,20 +23,24 @@ include('header.php');
                                 <div class="center-wrap">
                                     <div class="section text-center">
                                         <h4 class="mb-4 pb-3">Log In</h4>
-                                        <div class="form-group">
-                                            <input type="email" required name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                                            <i class="input-icon uil uil-at"></i>
-                                        </div>
-                                        <div class="form-group mt-2">
-                                            <input type="password" required name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                                            <i class="input-icon uil uil-lock-alt"></i>
-                                        </div>
-                                        <div class="elem-group">
-                                            <label for="captcha">Please Enter the Captcha Text</label>
-                                            <img src="captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
-                                            <input type="text" id="captcha" name="captcha_challenge">
-                                        </div>
-                                        <a href="authLogin.php" class="btn mt-4">submit</a>
+                                        <form action="authLogin.php" method="post" enctype="multipart/form-data" id="login-form">
+                                         
+                                         <div class="form-group">
+                                             <input type="email" required name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                             <i class="input-icon uil uil-at"></i>
+                                          </div>
+                                          
+                                          <div class="form-group mt-2">
+                                             <input type="password" required name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                             <i class="input-icon uil uil-lock-alt"></i>
+                                          </div>
+                                          <div class="elem-group">
+                                             <label for="captcha">Please Enter the Captcha Text</label>
+                                             <img src="captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i>
+                                             <input type="text" id="captcha" name="captcha_challenge">
+                                          </div>
+                                          <input type="submit" name ="login" value = "Login">
+                                        </form>
                                         <p class="mb-0 mt-4 text-center">
                                             <a href="" class="link">Forgot your password?</a>
                                         </p>
@@ -50,6 +54,7 @@ include('header.php');
                                     <div class="section text-center">
                                         <h4 class="mb--5 pb-1">Sign Up</h4>
                                         <div class="form-group">
+                                        <form action="#" method="post" enctype="multipart/form-data" id="sign-form">
                                             <table>
                                                 <tr>
                                                     <td>
@@ -92,7 +97,8 @@ include('header.php');
                                                 <input type="password" name="cnfpass" class="form-style" placeholder="Confirm Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="" class="btn mt-4">submit</a>
+                                            <input type="submit" name="Signup" value="Signup">
+                                        </form>
                                         </div>
                                     </div>
                                 </div>
