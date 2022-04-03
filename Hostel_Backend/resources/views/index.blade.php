@@ -1,8 +1,22 @@
-<?php
-//header.php
-include('header.php');
-?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Signup</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" />
+
+</head>
+
+<body>
+    
+<main id="mainarea">
 
 <!-------Login Area-------->
 <div class="section">
@@ -23,15 +37,15 @@ include('header.php');
                                 <div class="center-wrap">
                                     <div class="section text-center">
                                         <h4 class="mb-4 pb-3">Log In</h4>
-                                        <form action="authLogin.php" method="post" enctype="multipart/form-data" id="login-form">
-                                         
+                                        <form action="{{route('login-user')}}" method="post" enctype="multipart/form-data" id="login-form">
+                                        @csrf
                                          <div class="form-group">
-                                             <input type="email" required name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                             <input type="email" required name="email" value="{{old('email')}}" class="form-style" placeholder="Your Email" id="email" autocomplete="off">
                                              <i class="input-icon uil uil-at"></i>
                                           </div>
                                           
                                           <div class="form-group mt-2">
-                                             <input type="password" required name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                             <input type="password" required name="logpass" value="{{old('logpass')}}" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
                                              <i class="input-icon uil uil-lock-alt"></i>
                                           </div>
                                           <div class="elem-group">
@@ -54,7 +68,14 @@ include('header.php');
                                     <div class="section text-center">
                                         <h4 class="mb--5 pb-1">Sign Up</h4>
                                         <div class="form-group">
-                                        <form action="#" method="post" enctype="multipart/form-data" id="sign-form">
+                                        <form action="{{route('register-user')}}" method="post" enctype="multipart/form-data" id="sign-form">
+                                            @if(Session::has('success'))
+                                            <div class="alert alert-successfull">{{Session::get('success')}}</div>
+                                            @endif
+                                            @if(Session::has('fail'))
+                                            <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                                            @endif
+                                        @csrf
                                             <table>
                                                 <tr>
                                                     <td>
@@ -64,16 +85,16 @@ include('header.php');
                                                         </div>
                                                     <td>
                                                         <div class="form-group mt-2 ">
-                                                            <input type="text"required name="middleName" class="form-style" placeholder="Middle" id="firstName" autocomplete="off">
+                                                            <input type="text" required name="middleName" class="form-style" placeholder="Middle" id="middleName" autocomplete="off">
                                                         </div>
                                                     <td>
                                                         <div class="form-group mt-2">
-                                                            <input type="text" required name="lastName" class="form-style" placeholder="Last" id="firstName" autocomplete="off">
+                                                            <input type="text" required name="lastName" class="form-style" placeholder="Last" id="lastName" autocomplete="off">
                                                         </div>
                                                 </tr>
                                             </table>
                                             <div class="form-group mt-2">
-                                                <input type="email" required name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                                <input type="email" required name="email" class="form-style" placeholder="Your Email" id="email" autocomplete="off">
                                                 <i class="input-icon uil uil-phone-alt"></i>
                                             </div>
                                             <div class="form-group mt-2">
@@ -112,7 +133,11 @@ include('header.php');
     </div>
 
 
-    <?php
-    //footer.php
-    include('footer.php');
-    ?>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

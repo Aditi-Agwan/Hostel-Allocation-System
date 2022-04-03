@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CustomAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,15 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [CustomAuthController::class,'login'])->middleware('alreadyLoggedIn');
 
-Route::get('/signup.html', function () {
-    return view('signup');
-});
+Route::post('/register-user',[CustomAuthController::class,'registerUser'])->name('register-user');
 
-Route::get('/authLogin.php', function()
-{
-    return view('authlogin');
-});
+Route::post('/login-user',[CustomAuthController::class,'loginUser'])->name('login-user');
+
+Route::get('/dashboard',[CustomAuthController::class,'dashboard'])->middleware('isLoggedIn');
+
+Route::get('/logout',[CustomAuthController::class,'logout']);
+
+/*
+Route::get('/signup.html', [CustomAuthController::class,'registration']);
+*/
